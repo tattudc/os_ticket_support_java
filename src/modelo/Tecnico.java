@@ -9,7 +9,7 @@ package modelo;
  *
  * @author Neto
  */
-public class Tecnico {
+public class Tecnico implements Comparable<Tecnico>{
     private Integer id;
     private String nome;
     private String email;
@@ -43,5 +43,10 @@ public class Tecnico {
     public String toString() {
         return "Tecnicos{" + "nome=" + nome + '}';
     }        
+
+    @Override
+    public int compareTo(Tecnico o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

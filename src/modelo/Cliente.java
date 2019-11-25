@@ -9,7 +9,7 @@ package modelo;
  *
  * @author Neto
  */
-public class Cliente {
+public class Cliente implements Comparable<Cliente>{
     private Integer id;
     private String nome;
     private String cnpj;
@@ -52,6 +52,11 @@ public class Cliente {
     @Override
     public String toString() {
         return "Cliente{" + "nome=" + nome + '}';
+    }
+
+    @Override
+    public int compareTo(Cliente o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
         
 }

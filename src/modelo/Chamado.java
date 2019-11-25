@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Neto
  */
-public class Chamado {
+public class Chamado implements Comparable<Chamado>{
     private Integer id;
     private String assunto;
     private boolean situacao;
@@ -70,5 +70,10 @@ public class Chamado {
     public String toString() {
         return "Chamado{" + "id=" + id + ", assunto=" + assunto + ", situacao=" + situacao + ", tecnico=" + tecnico + ", cliente=" + cliente + ", tramites=" + tramites + '}';
     }           
+
+    @Override
+    public int compareTo(Chamado o) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
