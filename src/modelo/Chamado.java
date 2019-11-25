@@ -12,20 +12,29 @@ import java.util.ArrayList;
  * @author Neto
  */
 public class Chamado implements Comparable<Chamado>{
-    private Integer id;
+    private int id;
     private String assunto;
     private boolean situacao;
-    private Tecnico tecnico;
-    private Cliente cliente;
+    private int id_tecnico;
+    private int id_cliente;
+    private String descricao;
     private ArrayList<Tramite> tramites = new ArrayList<>();
 
-    public Chamado(String assunto, boolean situacao, Tecnico tecnico, Cliente cliente) {
+    public Chamado(String assunto, boolean situacao, int id_tecnico, int id_cliente) {
         this.assunto = assunto;
         this.situacao = situacao;
-        this.tecnico = tecnico;
-        this.cliente = cliente;
+        this.id_tecnico = id_tecnico;
+        this.id_cliente = id_cliente;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }    
+    
     public String getAssunto() {
         return assunto;
     }
@@ -42,33 +51,33 @@ public class Chamado implements Comparable<Chamado>{
         this.situacao = situacao;
     }
 
-    public Tecnico getTecnico() {
-        return tecnico;
+    public int getId_tecnico() {
+        return id_tecnico;
     }
 
-    public void setTecnico(Tecnico tecnico) {
-        this.tecnico = tecnico;
+    public void setId_tecnico(int id_tecnico) {
+        this.id_tecnico = id_tecnico;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public int getId_cliente() {
+        return id_cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
     public ArrayList<Tramite> getTramites() {
         return tramites;
     }
 
-    public void setTramites(ArrayList<Tramite> tramites) {
-        this.tramites = tramites;
-    }
+    public void setTramites(Tramite tramite) {
+        this.tramites.add(tramite);
+    }    
 
     @Override
     public String toString() {
-        return "Chamado{" + "id=" + id + ", assunto=" + assunto + ", situacao=" + situacao + ", tecnico=" + tecnico + ", cliente=" + cliente + ", tramites=" + tramites + '}';
+        return "Chamado{" + "id=" + id + ", assunto=" + assunto + ", situacao=" + situacao + ", tramites=" + tramites + '}';
     }           
 
     @Override
