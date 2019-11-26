@@ -10,12 +10,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 
 /**
@@ -23,27 +22,19 @@ import javafx.scene.layout.BorderPane;
  *
  * @author TatuEdi
  */
-public class TelaLoginController implements Initializable {
-    @FXML
-    private Button btnEntrar;
-    
-    @FXML private BorderPane bdPane;
+public class AbrirChamadoController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
+    @FXML private BorderPane bdPane;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    } 
+    }  
     
-    @FXML private void telaInicial(){
-        try{
-                URL url = getClass().getResource("/visao/telaInicial.fxml");
-                Parent telaInicial = FXMLLoader.load(url);
-                bdPane.setCenter(telaInicial);
-            } catch (IOException ex) {
-                Logger.getLogger(TelaLoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }
+    @FXML private void cancelaNewCall(){
+                bdPane.setVisible(false);
+        } 
+}

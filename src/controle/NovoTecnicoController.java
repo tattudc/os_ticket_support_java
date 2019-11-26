@@ -9,26 +9,26 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
  *
  * @author TatuEdi
  */
-public class EditarUserController implements Initializable {
+public class NovoTecnicoController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
-    @FXML private VBox bdPane;
+    @FXML private BorderPane bdPane;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
-    @FXML private void cancelaNewEditUser(){
+    @FXML private void cancelaNewtTec(){
                 bdPane.setVisible(false);
         } 
 }

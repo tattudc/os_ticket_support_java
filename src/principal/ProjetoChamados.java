@@ -19,7 +19,7 @@ public class ProjetoChamados extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/visao/editarUser.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/visao/TelaLogin.fxml"));
         
         Scene scene = new Scene(root);
         

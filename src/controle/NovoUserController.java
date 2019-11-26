@@ -7,7 +7,9 @@ package controle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
@@ -19,9 +21,14 @@ public class NovoUserController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    @FXML private VBox bdPane;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
     
+    @FXML private void cancelaNewUser(){
+                bdPane.setVisible(false);
+        } 
 }
