@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.TelaInicialController">
+   <children>
+      <BorderPane fx:id="borderInicial" prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <VBox prefHeight="56.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fill="#0a06f2" layoutX="6.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CALL SYSTEM - Sistema de Chamadas de serviço" wrappingWidth="563.0393676757812">
+                           <font>
+                              <Font name="Bank Gothic Medium BT" size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <MenuBar fx:id="menuBar">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="SISTEMA">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="SALVAR" />
+                              <MenuItem mnemonicParsing="false" text="SAIR" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="CHAMADAS">
+                        <items>
+                          <MenuItem fx:id="newCall" mnemonicParsing="false" onAction="#newCall" text="NOVA" />
+                              <MenuItem mnemonicParsing="false" text="EDITAR" />
+                              <MenuItem mnemonicParsing="false" text="HISTÓRICO" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="TÉCNICOS">
+                        <items>
+                          <MenuItem fx:id="newTec" mnemonicParsing="false" onAction="#novoTecnico" text="NOVO" />
+                              <MenuItem fx:id="editTec" mnemonicParsing="false" onAction="#editarTecnico" text="EDITAR" />
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="CLIENTES">
+                           <items>
+                              <MenuItem fx:id="newCliente" mnemonicParsing="false" onAction="#novoUser" text="NOVO" />
+                              <MenuItem fx:id="editarUser" mnemonicParsing="false" onAction="#editarUser" text="EDITAR" />
+                           </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <ImageView fitHeight="337.0" fitWidth="583.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@investidor-anjo-ideia.jpg" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
